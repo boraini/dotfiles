@@ -4,9 +4,6 @@
 [submodule "vim/pack/tpope/start/fugitive"]
 	path = vim/pack/tpope/start/fugitive
 	url = https://tpope.io/vim/fugitive.git
-[submodule "vim/pack/dist/start/vim-airline"]
-	path = vim/pack/dist/start/vim-airline
-	url = https://github.com/pangloss/vim-javascript.git
 [submodule "vim/pack/themes/start/dracula"]
 	path = vim/pack/themes/start/dracula
 	url = https://github.com/dracula/vim.git
@@ -16,3 +13,6 @@
 [submodule "vim/pack/vim-javascript/start/vim-javascript"]
 	path = vim/pack/vim-javascript/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/pack/dist/start/vim-airline"]
+	path = vim/pack/dist/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git

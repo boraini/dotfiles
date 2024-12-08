@@ -1,0 +1,24 @@
+[Unit]
+Description=BrailleBot Service
+After=network.target
+
+[Service]
+Type=simple
+
+User=sayabot
+WorkingDirectory=/home/sayabot/repos/braillebot/
+
+ExecStart=/home/sayabot/.local/share/fnm/node-versions/v20.17.0/installation/bin/node /home/sayabot/repos/braillebot/build/index.js
+
+Restart=on-failure
+# Other restart options: always, on-abort, etc
+Environment=PORT=8080
+Environment=SSL_CERT=/etc/letsencrypt/live/pulse.boraini.com/fullchain.pem
+Environment=SSL_KEY=/etc/letsencrypt/live/pulse.boraini.com/privkey.pem
+# The install section is needed to use
+# `systemctl enable` to start on boot
+# For a user service that you want to enable
+# and start automatically, use `default.target`
+# For system level services, use `multi-user.target`
+[Install]
+WantedBy=multi-user.target
